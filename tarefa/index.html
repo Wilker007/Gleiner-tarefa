@@ -1,0 +1,67 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>E-commerce</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>E-Commerce de Wilker</h1>
+            <nav>
+                <ul>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="sobre_nos.html">Sobre Nós</a>
+                    <a href="autor.html">Autor</a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <ul>
+                    <div>
+                        <h3>Produto 1</h3>
+                        <img src="img/d171129177.jpg" alt="Imagem do Produto 1" width="150" />
+                        <p>Descrição breve do Produto 1.</p>
+                        <p>Preço: R$ 100,00</p>
+                    </div>
+                    <div>
+                        <h3>Produto 2</h3>
+                        <img src="img/can-someone-please-explain-to-me-why-beyblade-x-is-good-or-v0-j6315e1geyme1.jpg" alt="Imagem do Produto 2" width="150" />
+                        <p>Descrição breve do Produto 2.</p>
+                        <p>Preço: R$ 200,00</p>
+                    </div>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Faça seu Pedido</h2>
+                <form action="pedido.html" method="post">
+                    <label for="nome">Nome:</label><br />
+                    <input type="text" id="nome" name="nome" required /><br /><br />
+
+                    <label for="email">E-mail:</label><br />
+                    <input type="email" id="email" name="email" required /><br /><br />
+
+                    <label for="produto">Produto:</label><br />
+                    <select id="produto" name="produto" required>
+                        <option value="">Selecione</option>
+                        <option value="produto1">Produto 1</option>
+                        <option value="produto2">Produto 2</option>
+                    </select><br /><br />
+
+                    <label for="quantidade">Quantidade:</label><br />
+                    <input type="number" id="quantidade" name="quantidade" min="1" value="1" required /><br /><br />
+
+                    <input type="submit" value="Enviar Pedido" />
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 E-commerce de Wilker</p>
+        </footer>
+    </body>
+    </html>
