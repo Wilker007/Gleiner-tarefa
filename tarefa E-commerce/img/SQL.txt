@@ -1,0 +1,36 @@
+ CREATE TABLE clientes (
+    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(120) UNIQUE NOT NULL,
+    telefone VARCHAR(20)
+);
+
+INSERT INTO clientes (nome, email, telefone) VALUES
+('Ana Pereira', 'ana@gmail.com', '65999990000'),
+('João Silva', 'joao@gmail.com', '65988887777'),
+('Carlos Mendes', 'carlos@gmail.com', '65977776666');
+
+CREATE TABLE produtos (
+    id_produto INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(150) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    id_categoria INT,
+    FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+);
+
+INSERT INTO produtos (nome, preco, id_categoria) VALUES
+('Banana Nanica', 6.50, 1),
+('Alface Crespa', 4.00, 2),
+('Arroz Integral', 12.90, 3);
+
+CREATE TABLE pedidos (
+    id_pedido INT PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INT,
+    data_pedido DATE NOT NULL,
+    metodo_pagamento VARCHAR(20)
+);
+
+INSERT INTO pedidos (id_cliente, data_pedido, metodo_pagamento) VALUES
+(1, '2025-02-10', 'PIX'),
+(2, '2025-02-11', 'Cartão de Crédito'),
+(3, '2025-02-12', 'Dinheiro');
